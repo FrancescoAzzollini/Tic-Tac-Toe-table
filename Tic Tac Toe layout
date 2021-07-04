@@ -1,0 +1,21 @@
+import random
+m = 3
+n = 3
+r = 0
+c = 0
+h = m * ' ---'
+vert = ''
+table = ''
+choices = ['| O ', '| X ', '| O ', '| O ', '| O ', '| X ', '| X ', '| X ', '| X '  ]
+while r < n:
+  variables = (random.sample(choices, m))
+  ver = ''.join([str(item) for item in variables]) + '|'
+  table = table + '\n' +  h + '\n' + ver
+  r += 1 
+
+while r == n:
+  table = table + '\n' +  h + '\n' 
+  r += 1 
+#split = table.split('|')
+#print(split)
+print(table)
